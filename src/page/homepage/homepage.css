@@ -1,0 +1,85 @@
+.movie-div{
+  grid-template-columns: repeat(4,1fr);
+  /* gap: 3rem; */
+    display: grid;
+    margin-top: 0;
+    background-color: black;
+    padding-left: 4rem;
+    padding-right:4rem;
+  
+  
+  
+}
+
+.movie-di{
+    width: 19rem;
+    height: 27rem;
+    font-weight: bolder;
+    opacity: 0.8;
+    border-radius: 0.5rem;
+    margin-top: 1.6rem;
+    border: none; 
+    margin-left: 1rem;
+  background-color:rgb(22,22,22);
+  color: white;
+}
+
+.movie-img{
+     width: 16.5rem;
+  height: 21rem;
+  border: none;
+  margin-top: 1.4rem;
+  margin-left: 1.4rem;
+}
+
+
+
+.movie-title{
+    color: white;
+    font-size: 1.5rem;
+   text-align: center;
+   margin-top: -0.01rem;
+}
+
+.movie-di:hover{
+    -webkit-transform: scale(1);
+    -ms-transform: scale(0.5);
+    transform: scale(1.02);
+    transition: all .2s ease-out
+}
+
+.paginationBttns{
+    width: 80%;
+    height: 40px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-left: 8rem;
+    margin-top: 2rem;
+  }
+
+  .paginationBttns a{
+    padding: 10px;
+    margin: 8px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    background-color:rgb(22,22,22);;
+  }
+
+
+  .paginationActive a{
+    color: white;
+    background-color: rgb(97,207,122);
+  }
+
+  .paginate-div{
+    background-color: black;
+    padding-top: 2rem;
+    padding-bottom: 0.5rem;
+  
+  }
+
+  .paginationBttns a:hover{
+    background-color: rgb(97,207,122);
+  }

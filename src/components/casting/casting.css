@@ -1,0 +1,48 @@
+p {
+    color: white;
+    margin-top: 17rem;
+    font-size: 2.5rem;
+    margin-left: 4rem;
+}
+
+.cast-photo{
+    background-color: white;
+    height: 7rem;
+    width: 7rem;
+    margin-left: 4rem;
+    border-radius: 3.5rem;
+    margin-top: 3rem;
+
+}
+.container_actor{
+    color: white;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: 100%;
+
+}
+.artist-container{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin: 0 4rem;
+    overflow: auto;
+    flex-wrap: wrap;
+    margin-top: 15rem;
+    position: relative;
+    align-items: center;
+    justify-self: center;
+    top: 50%;
+}
+.release{
+    color: rgb(255, 255, 255);
+    position: relative;
+    display: flex;
+    margin: 2rem 1rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
