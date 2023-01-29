@@ -3,9 +3,11 @@ import Navbar from "../../components/navbar/navbar";
 import MoviesCategory from "../../components/moviesCategory/moviesCategory";
 import { fetchData, getData } from "../../utils/axios";
 import MovieCard from "../../components/movieCard/MovieCard";
+import ReactPaginate from "react-paginate";
 import("./movies.css");
 
 const Movies = () => {
+  const [currentPage, setCurrentPage] = useState(1);
   const [movieData, setMovieData] = useState([]);
 
   const mockData = [
@@ -96,15 +98,36 @@ const Movies = () => {
       setMovieData(data.items);
     });
   }, []);
+
+  const postPerPage = 20;
+  const indexOfLastPost = currentPage * postPerPage;
+  const indexOfFirstPost = indexOfLastPost - postPerPage;
+  const currentMovies = movieData.slice(indexOfFirstPost, indexOfLastPost);
+  const pageCount = Math.ceil(movieData.length / postPerPage);
+  const changePage = ({ selected }) => {
+    setCurrentPage(selected);
+  };
+
   return (
     <div>
       <Navbar />
       <MoviesCategory handleRequest={handleRequest} />
       <div className="movie-div">
-        {movieData
-          ? movieData?.map((info) => <MovieCard data={info} />)
-          : mockData?.map((info) => <MovieCard data={info} />)}
+        {currentMovies.map((info) => (
+          <MovieCard data={info} />
+        ))}
       </div>
+      <ReactPaginate
+        previousLabel={"Previous"}
+        nextLabel={"Next"}
+        pageCount={pageCount}
+        onPageChange={changePage}
+        containerClassName={"paginationBttns"}
+        previousLinkClassName={"previousBttn"}
+        nextLinkClassName={"nextBttn"}
+        disabledClassName={"paginationDisabled"}
+        activeClassName={"paginationActive"}
+      />
     </div>
   );
 };

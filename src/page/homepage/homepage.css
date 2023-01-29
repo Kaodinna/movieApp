@@ -51,7 +51,7 @@
     display: flex;
     justify-content: center;
     margin-left: 8rem;
-    margin-top: 2rem;
+ 
   }
 
   .paginationBttns a{
@@ -70,8 +70,7 @@
   }
 
   .paginate-div{
-    background-color: black;
-    padding-top: 2rem;
+    background-color: white;
     padding-bottom: 0.5rem;
   
   }
