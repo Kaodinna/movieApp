@@ -7,7 +7,6 @@ const Details = ({ data }) => {
 
   const toggleModal = () => {
     setModalIsOpen((pre) => !pre);
-    // alert("clicked");
   };
 
   return (

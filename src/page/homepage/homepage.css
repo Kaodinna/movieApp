@@ -1,14 +1,10 @@
 .movie-div{
   grid-template-columns: repeat(4,1fr);
-  /* gap: 3rem; */
     display: grid;
     margin-top: 0;
     background-color: black;
     padding-left: 4rem;
     padding-right:4rem;
-  
-  
-  
 }
 
 .movie-di{

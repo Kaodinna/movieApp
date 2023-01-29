@@ -4,7 +4,7 @@ import "./moviecard.css";
 
 function MovieCard({ data }) {
   console.log(data);
-  const { description, id, image, title } = data;
+  const { id, image, title } = data;
   return (
     <>
       <div className="movie-di" key={id}>

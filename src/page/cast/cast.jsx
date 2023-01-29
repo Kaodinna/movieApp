@@ -5,7 +5,6 @@ import { useLocation } from "react-router-dom";
 import "./cast.css";
 import { useEffect, useState } from "react";
 import { getAllInfo } from "../../utils/axios";
-import mokdata from "../../data.json";
 
 const Cast = () => {
   const [allData, setMovieData] = useState([]);

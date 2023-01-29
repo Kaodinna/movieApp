@@ -1,4 +1,3 @@
-import ReactPlayer from "react-player";
 import style from "./Player.module.css";
 
 function Player({ url, toggleModal, title }) {
